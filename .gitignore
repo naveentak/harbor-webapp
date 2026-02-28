@@ -9,8 +9,12 @@ lerna-debug.log*
 
 node_modules
 dist
+.firebase
 .env
 .env.*
+
+# Binary downloads (served via Firebase Hosting, not git)
+public/downloads/*.dmg
 dist-ssr
 *.local
 
