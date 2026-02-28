@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 interface NavbarProps {
   scrolled: boolean
@@ -15,11 +16,8 @@ const Navbar = ({ scrolled }: NavbarProps) => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
-        <a href="#hero" className="flex items-center space-x-2">
-          <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-lg">H</span>
-          </div>
-          <span className="text-xl font-bold tracking-tight">arbor</span>
+        <a href="#hero">
+          <Logo />
         </a>
 
         <div className="hidden md:flex items-center space-x-8 text-sm font-medium">

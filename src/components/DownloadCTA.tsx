@@ -18,7 +18,7 @@ const DownloadCTA = () => {
           transition={{ duration: 0.6, delay: 0.1, type: 'spring', stiffness: 200 }}
           className="w-20 h-20 mx-auto mb-8 bg-white/10 rounded-[1.5rem] flex items-center justify-center border border-white/10"
         >
-          <span className="text-white font-bold text-3xl">H</span>
+          <img src="/harbor-icon.png" alt="Harbor" className="w-12 h-12 rounded-xl" />
         </motion.div>
 
         <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
