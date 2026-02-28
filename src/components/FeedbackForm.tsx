@@ -31,6 +31,7 @@ function parseTokenParams(): TokenParams | null {
 }
 
 const FUNCTION_URL = import.meta.env.VITE_SUPABASE_FUNCTION_URL
+const ANON_KEY = import.meta.env.VITE_SUPABASE_ANON_KEY
 
 const FeedbackForm = () => {
   const [token, setToken] = useState<TokenParams | null>(null)
@@ -57,7 +58,10 @@ const FeedbackForm = () => {
     try {
       const res = await fetch(FUNCTION_URL, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${ANON_KEY}`,
+        },
         body: JSON.stringify({
           deviceId: token.did,
           timestamp: token.ts,
