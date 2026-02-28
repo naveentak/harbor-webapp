@@ -102,7 +102,7 @@ const DownloadCTA = () => {
 
             {/* Download CTA */}
             <motion.a
-              href="https://github.com/naveentak/harbor-macos-app/releases/latest/download/Harbor.dmg"
+              href="/downloads/Harbor.dmg"
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center w-full px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg shadow-white/10"
