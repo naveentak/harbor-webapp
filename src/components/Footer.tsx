@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import Logo from './Logo'
 
 const Footer = () => {
   return (
@@ -12,11 +13,8 @@ const Footer = () => {
             transition={{ duration: 0.5 }}
             className="mb-10 md:mb-0 max-w-sm"
           >
-            <div className="flex items-center space-x-2 mb-6">
-              <div className="w-10 h-10 bg-black rounded-xl flex items-center justify-center">
-                <span className="text-white font-bold text-xl">H</span>
-              </div>
-              <span className="text-2xl font-bold tracking-tight">arbor</span>
+            <div className="mb-6">
+              <Logo size="md" />
             </div>
             <p className="text-gray-500 leading-relaxed mb-4">
               The dev server control center for macOS. Part of the r:labs suite by r:factory.
@@ -44,8 +42,8 @@ const Footer = () => {
             <div>
               <h4 className="font-bold mb-4 text-sm uppercase tracking-widest text-gray-400">Support</h4>
               <ul className="space-y-3 text-sm">
-                <li><a href="mailto:harbor@refactory.co.za?subject=Bug Report" className="text-gray-600 hover:text-black transition-colors">Report a Bug</a></li>
-                <li><a href="mailto:harbor@refactory.co.za?subject=Feature Request" className="text-gray-600 hover:text-black transition-colors">Request a Feature</a></li>
+                <li><a href="/feedback?type=bug" className="text-gray-600 hover:text-black transition-colors">Report a Bug</a> <span className="text-gray-300 text-xs">(requires app)</span></li>
+                <li><a href="/feedback?type=feature" className="text-gray-600 hover:text-black transition-colors">Request a Feature</a> <span className="text-gray-300 text-xs">(requires app)</span></li>
                 <li><a href="/privacy" className="text-gray-600 hover:text-black transition-colors">Privacy Policy</a></li>
               </ul>
             </div>

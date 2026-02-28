@@ -8,6 +8,7 @@ import DownloadCTA from './components/DownloadCTA'
 import BuiltByCare from './components/BuiltByCare'
 import Footer from './components/Footer'
 import PrivacyPolicy from './components/PrivacyPolicy'
+import FeedbackForm from './components/FeedbackForm'
 
 function App() {
   const [scrollY, setScrollY] = useState(0)
@@ -20,6 +21,10 @@ function App() {
 
   if (window.location.pathname === '/privacy') {
     return <PrivacyPolicy />
+  }
+
+  if (window.location.pathname === '/feedback') {
+    return <FeedbackForm />
   }
 
   return (

@@ -19,7 +19,7 @@ const BuiltByCare = () => {
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <motion.a
-            href="mailto:harbor@refactory.co.za?subject=Bug Report"
+            href="/feedback?type=bug"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 text-gray-700 font-medium text-sm hover:border-gray-400 transition-colors"
@@ -30,7 +30,7 @@ const BuiltByCare = () => {
             Report a Bug
           </motion.a>
           <motion.a
-            href="mailto:harbor@refactory.co.za?subject=Feature Request"
+            href="/feedback?type=feature"
             whileHover={{ scale: 1.04 }}
             whileTap={{ scale: 0.97 }}
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-gray-200 text-gray-700 font-medium text-sm hover:border-gray-400 transition-colors"
