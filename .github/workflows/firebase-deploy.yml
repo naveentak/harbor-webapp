@@ -28,6 +28,7 @@ jobs:
           VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL }}
           VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY }}
           VITE_SUPABASE_FUNCTION_URL: ${{ secrets.VITE_SUPABASE_FUNCTION_URL }}
+          VITE_DMG_DOWNLOAD_URL: ${{ secrets.VITE_DMG_DOWNLOAD_URL }}
 
       - name: Deploy to Firebase Hosting
         run: npx firebase-tools deploy --only hosting --project rlabs-app

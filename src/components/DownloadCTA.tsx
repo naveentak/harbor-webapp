@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 
+const dmgUrl = import.meta.env.VITE_DMG_DOWNLOAD_URL || '/downloads/Harbor.dmg'
+
 const DownloadCTA = () => {
   return (
     <div className="max-w-7xl mx-auto px-6">
@@ -102,7 +104,8 @@ const DownloadCTA = () => {
 
             {/* Download CTA */}
             <motion.a
-              href="/downloads/Harbor.dmg"
+              href={dmgUrl}
+              download
               whileHover={{ scale: 1.04 }}
               whileTap={{ scale: 0.97 }}
               className="inline-flex items-center justify-center w-full px-8 py-4 bg-white text-black rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-lg shadow-white/10"
