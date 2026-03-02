@@ -66,13 +66,7 @@ const ServerDemo = () => {
   const dur = prefersReduced ? 0.01 : undefined
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: '-100px' }}
-      transition={{ duration: dur ?? 0.7, ease: expoCurve }}
-      className="max-w-lg mx-auto"
-    >
+    <div className="max-w-lg mx-auto">
       <div
         className="liquid-glass-dark rounded-2xl overflow-hidden border border-white/10"
         role="listbox"
@@ -257,7 +251,7 @@ const ServerDemo = () => {
           </AnimatePresence>
         </div>
       </div>
-    </motion.div>
+    </div>
   )
 }
 

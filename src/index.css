@@ -70,6 +70,14 @@ body {
   border-radius: 0.375rem;
 }
 
+/* Dock shelf glass */
+.dock-shelf-glass {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: saturate(120%) blur(20px);
+  -webkit-backdrop-filter: saturate(120%) blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
 /* Showcase section — dark gradient with colored blobs */
 .glass-showcase-bg {
   background:
@@ -113,6 +121,16 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+}
+
+/* Logo glow — progressive enhancement fallback */
+@keyframes logo-glow-breathe {
+  0%, 100% { opacity: 0.3; transform: scale(0.9); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+}
+
+.logo-glow {
+  animation: logo-glow-breathe 4s ease-in-out infinite;
 }
 
 /* Accessibility — reduced motion */
