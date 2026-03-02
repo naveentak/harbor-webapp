@@ -24,13 +24,14 @@ const DownloadCTA = () => {
         </motion.div>
 
         <h2 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-          Grab it free
+          Totally, completely,
           <br />
-          <span className="text-blue-400">while you can.</span>
+          <span className="text-green-400">ridiculously free.</span>
         </h2>
 
         <p className="text-gray-400 text-lg mb-6 max-w-xl mx-auto leading-relaxed">
-          We're launching Harbor by giving it away for free — for a limited time. No subscriptions, no hidden fees. Just download and own it forever.
+          Not free-with-an-asterisk. Not free-for-14-days. Not "free" but you need to enter a credit card.
+          Just free. Like, download-it-and-it-works free. We built this because we needed it — and you probably do too.
         </p>
       </motion.div>
 
@@ -43,39 +44,34 @@ const DownloadCTA = () => {
         className="max-w-md mx-auto relative"
       >
         {/* Glow ring */}
-        <div className="absolute -inset-1 bg-gradient-to-b from-blue-500/20 via-transparent to-blue-500/10 rounded-[2.5rem] blur-sm" />
+        <div className="absolute -inset-1 bg-gradient-to-b from-green-500/20 via-transparent to-green-500/10 rounded-[2.5rem] blur-sm" />
 
         <div className="relative bg-[#1C1C1E] rounded-[2rem] border border-white/10 p-10 text-center overflow-hidden">
           {/* Ambient glow */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-blue-600/8 blur-[80px] rounded-full" />
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-48 h-48 bg-green-600/8 blur-[80px] rounded-full" />
 
           <div className="relative">
-            <p className="text-green-400 text-sm font-semibold tracking-widest uppercase mb-6">Launch Offer</p>
-
-            <div className="flex items-baseline justify-center mb-2">
-              <span className="text-white/20 text-2xl font-medium mr-1 line-through decoration-2">$</span>
-              <motion.span
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: 0.3, type: 'spring', stiffness: 300 }}
-                className="text-5xl font-black text-white/20 tracking-tight line-through decoration-2"
-              >
-                19.99
-              </motion.span>
-            </div>
+            <p className="text-green-400 text-sm font-semibold tracking-widest uppercase mb-6">The Entire App</p>
 
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: 0.5, type: 'spring', stiffness: 200 }}
-              className="text-6xl font-black text-green-400 tracking-tight mb-2"
+              transition={{ duration: 0.5, delay: 0.3, type: 'spring', stiffness: 200 }}
+              className="mb-2"
             >
-              FREE
+              <span className="text-7xl font-black text-white tracking-tight">$0</span>
             </motion.div>
 
-            <p className="text-white/30 text-sm mb-8">For a limited time &middot; Lifetime license</p>
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.4, delay: 0.5 }}
+              className="text-white/30 text-sm mb-8"
+            >
+              Not $0/month. Not $0 for the first year. Just $0. Forever.
+            </motion.p>
 
             {/* Perks */}
             <div className="space-y-3 mb-10 text-left max-w-xs mx-auto">
@@ -83,8 +79,9 @@ const DownloadCTA = () => {
                 'Auto-detects 25+ server types',
                 'Stop, restart, open in one click',
                 'Real-time logs for every server',
-                'Lifetime updates at no extra cost',
+                'All future updates included',
                 '100% local — no accounts, no cloud',
+                'No telemetry, no tracking, no nonsense',
               ].map((perk, i) => (
                 <motion.div
                   key={i}
@@ -94,7 +91,7 @@ const DownloadCTA = () => {
                   transition={{ duration: 0.3, delay: 0.35 + i * 0.06 }}
                   className="flex items-start space-x-3"
                 >
-                  <svg className="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-5 h-5 text-green-400 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                   </svg>
                   <span className="text-white/60 text-sm">{perk}</span>
@@ -113,7 +110,7 @@ const DownloadCTA = () => {
               <svg className="w-5 h-5 mr-2.5" viewBox="0 0 384 512" fill="currentColor">
                 <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z" />
               </svg>
-              Download for macOS
+              Download for macOS — free forever
             </motion.a>
 
             <p className="text-white/20 text-xs mt-4">Requires macOS 14 Sonoma or later</p>
@@ -145,7 +142,7 @@ const DownloadCTA = () => {
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
           </svg>
-          <span>Lifetime Support</span>
+          <span>Built With Love</span>
         </div>
       </motion.div>
     </div>
