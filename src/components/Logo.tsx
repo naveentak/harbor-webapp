@@ -1,5 +1,6 @@
 interface LogoProps {
   size?: 'sm' | 'md' | 'lg'
+  variant?: 'light' | 'dark'
 }
 
 const sizeMap = {
@@ -8,8 +9,9 @@ const sizeMap = {
   lg: { img: 'w-20 h-20', text: 'text-3xl' },
 }
 
-const Logo = ({ size = 'sm' }: LogoProps) => {
+const Logo = ({ size = 'sm', variant = 'light' }: LogoProps) => {
   const s = sizeMap[size]
+  const textColor = variant === 'dark' ? 'text-white' : ''
   return (
     <div className="flex items-center space-x-2">
       <img
@@ -17,7 +19,7 @@ const Logo = ({ size = 'sm' }: LogoProps) => {
         alt="Harbor"
         className={`${s.img} rounded-xl`}
       />
-      <span className={`${s.text} font-bold tracking-tight`}>Harbor</span>
+      <span className={`${s.text} font-bold tracking-tight ${textColor}`}>Harbor</span>
     </div>
   )
 }
