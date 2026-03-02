@@ -99,6 +99,22 @@ body {
   100% { opacity: 0; transform: translateY(-8px); }
 }
 
+/* Dark glass — navbar scrolled state */
+.dark-glass {
+  background: rgba(10, 10, 10, 0.8);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient text — dark variant */
+.gradient-text-dark {
+  background: linear-gradient(135deg, #ffffff 0%, #999999 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
 /* Accessibility — reduced motion */
 @media (prefers-reduced-motion: reduce) {
   .liquid-glass-dark,

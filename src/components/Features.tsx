@@ -86,13 +86,13 @@ const Features = () => {
         transition={{ duration: 0.5 }}
         className="text-center mb-16"
       >
-        <span className="text-blue-600 font-semibold tracking-tight uppercase text-sm mb-4 block">
+        <span className="text-blue-400 font-semibold tracking-tight uppercase text-sm mb-4 block">
           Features
         </span>
-        <h2 className="text-4xl md:text-5xl font-bold mb-6">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
           Everything you need. Nothing you don't.
         </h2>
-        <p className="text-xl text-gray-500 max-w-2xl mx-auto">
+        <p className="text-xl text-white/50 max-w-2xl mx-auto">
           Built with Swift, optimized for Apple Silicon. Detects 25+ server types out of the box.
         </p>
       </motion.div>
@@ -109,17 +109,17 @@ const Features = () => {
             key={idx}
             variants={cardVariants}
             whileHover={{ y: -4, transition: { duration: 0.2 } }}
-            className="bg-white p-8 rounded-[2rem] border border-gray-100 shadow-sm hover:shadow-lg transition-shadow group cursor-default"
+            className="bg-white/[0.04] p-8 rounded-[2rem] border border-white/5 hover:border-white/10 transition-colors group cursor-default"
           >
             <motion.div
               whileHover={{ scale: 1.1, rotate: -3 }}
               transition={{ type: 'spring', stiffness: 400, damping: 17 }}
-              className="w-12 h-12 bg-gray-50 rounded-2xl flex items-center justify-center mb-6"
+              className="w-12 h-12 bg-white/[0.06] rounded-2xl flex items-center justify-center mb-6"
             >
               {feature.icon}
             </motion.div>
-            <h3 className="text-xl font-bold mb-3">{feature.title}</h3>
-            <p className="text-gray-500 leading-relaxed">{feature.description}</p>
+            <h3 className="text-xl font-bold mb-3 text-white">{feature.title}</h3>
+            <p className="text-white/50 leading-relaxed">{feature.description}</p>
           </motion.div>
         ))}
       </motion.div>
